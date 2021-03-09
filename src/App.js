@@ -17,7 +17,9 @@ const Styles = {
 
   title: {
     fontSize: '5em',
+    color: '#000',
     padding: '.2em',
+    textShadow: '2px 2px #fff',
   }
 }
 

@@ -6,8 +6,9 @@ import ToDo from "./Todo";
 
 const Styles = {
   container: {
-    //border: '.2em solid #000',
-    boxShadow: '0 0 4em 0 #000', 
+    //border: '1em solid #000',
+    //boxShadow: '1em 1em 4em 1em #ccc',
+    boxShadow: 'inset 0 0 0 1em #fff', 
     backgroundImage: `url("https://cdn.pixabay.com/photo/2013/07/12/14/42/education-148605_1280.png")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',

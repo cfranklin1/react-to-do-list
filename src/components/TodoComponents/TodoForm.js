@@ -1,16 +1,34 @@
 import React from "react";
 
 const Styles = {
-  add: {
-    backgroundColor: '#000',
-    color: '#fff'
+  container: {
+    alignSelf: 'flex-end',
+    padding: '1em',
+    margin: '0 0 1em'
+
   },
-  button: {
-    backgroundColor: '#000',
+  add: {
+    backgroundImage: `url(https://cdn.pixabay.com/photo/2016/10/10/01/49/leave-1727488_1280.png)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    borderRadius:'50%',
+    width: '5em',
+    height: '5em',
+    marginLeft: '.5em',
     color: '#fff',
+    
+  },
+  clear: {
+    backgroundImage: `url(https://cdn.pixabay.com/photo/2012/04/02/16/52/trash-24938_1280.png)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: '#ccc',
+    color: '#000',
     fontSize: '1.2em',
-    width: '10em',
-    height: 'auto'
+    borderRadius: '25%',
+    width: '4em',
+    height: '4em',
+    margin: '.5em'
   }
   
 };
@@ -39,7 +57,7 @@ class ToDoForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={Styles.container}>
         <form onSubmit={this.handleSubmit}>
           
           <input
@@ -52,7 +70,7 @@ class ToDoForm extends React.Component {
           <button type="submit" style={Styles.add}>+</button>
 
         </form>
-        <button onClick={this.props.clearCompleted} style = {Styles.button}>clear completed</button>
+        <button onClick={this.props.clearCompleted} style = {Styles.clear}></button>
       </div>
     );
   }
