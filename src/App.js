@@ -1,18 +1,23 @@
 import React from "react";
 import ToDoList from "./components/TodoComponents/TodoList";
 import ToDoForm from "./components/TodoComponents/TodoForm";
+import "./App.css";
 
 
 const Styles = {
+
   container: {
+    fontFamily: 'convection',
     backgroundImage: `url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_1280.jpg")`,
     backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
- 
+    width: '100%',
+    maxWidth: '100%'
   },
 
   title: {
@@ -20,7 +25,8 @@ const Styles = {
     color: '#000',
     padding: '.2em',
     textShadow: '2px 2px #fff',
-  }
+  },  
+
 }
 
 class App extends React.Component {
@@ -82,7 +88,7 @@ class App extends React.Component {
     if (!this.state.todos) return <h1>loading to dos... </h1>;
 
     return (
-      <div style = {Styles.container}>
+      <div style = {Styles.container} id='app-div'>
         <h2 style = {Styles.title}>Todo</h2>
         <ToDoList
           todos={this.state.todos}

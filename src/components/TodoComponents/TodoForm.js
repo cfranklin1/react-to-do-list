@@ -4,8 +4,13 @@ const Styles = {
   container: {
     alignSelf: 'flex-end',
     padding: '1em',
-    margin: '0 0 1em'
-
+    margin: '0 0 1em',
+  },
+  input: {
+    backgroundColor: 'transparent',
+    color: '#ccc',
+    border: 'none',
+    fontSize: '1.2em'
   },
   add: {
     backgroundImage: `url(https://cdn.pixabay.com/photo/2016/10/10/01/49/leave-1727488_1280.png)`,
@@ -24,7 +29,7 @@ const Styles = {
     backgroundPosition: 'center',
     backgroundColor: '#ccc',
     color: '#000',
-    fontSize: '1.2em',
+    alignSelf: 'flex-end',
     borderRadius: '25%',
     width: '4em',
     height: '4em',
@@ -57,10 +62,11 @@ class ToDoForm extends React.Component {
 
   render() {
     return (
-      <div style={Styles.container}>
+      <div style={Styles.container} id='todo-form'>
         <form onSubmit={this.handleSubmit}>
           
           <input
+            style={Styles.input}
             value={this.state.newTask}
             name="newTask"
             placeholder="new task..."

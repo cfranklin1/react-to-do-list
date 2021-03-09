@@ -15,8 +15,7 @@ const Styles = {
     display: 'flexbox',
     alignContent: 'center',
     alignItems: 'center',
-
-    width: '10em',
+    width: 'auto',
     height: 'auto',
     margin: '1em',
     padding: '2em'
@@ -44,7 +43,7 @@ class ToDoList extends React.Component {
 
   render() {
     return (
-      <div style={Styles.container}>
+      <div style={Styles.container} id='todo-list'>
         <input
           value={this.state.searchInput}
           name="searchInput"
