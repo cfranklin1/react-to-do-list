@@ -12,6 +12,7 @@ const Styles = {
     backgroundImage: `url("https://cdn.pixabay.com/photo/2013/07/12/14/42/education-148605_1280.png")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundColor: '#fff',
     display: 'flexbox',
     alignContent: 'center',
     alignItems: 'center',
