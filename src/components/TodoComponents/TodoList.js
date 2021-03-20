@@ -8,6 +8,8 @@ const Styles = {
   container: {
     //border: '1em solid #000',
     //boxShadow: '1em 1em 4em 1em #ccc',
+    overflow: 'scroll',
+    maxHeight: '50%',
     boxShadow: 'inset 0 0 0 1em #fff', 
     backgroundImage: `url("https://cdn.pixabay.com/photo/2013/07/12/14/42/education-148605_1280.png")`,
     backgroundSize: 'cover',
@@ -20,6 +22,12 @@ const Styles = {
     height: 'auto',
     margin: '1em',
     padding: '2em'
+  },
+
+  input: {
+    display: 'flex',
+    width: '95%',
+    marginLeft: '3em'
   },
 
   list: {
@@ -46,6 +54,7 @@ class ToDoList extends React.Component {
     return (
       <div style={Styles.container} id='todo-list'>
         <input
+          style={Styles.input}
           value={this.state.searchInput}
           name="searchInput"
           onChange={this.handleSearch}

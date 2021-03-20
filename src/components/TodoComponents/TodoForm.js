@@ -8,7 +8,8 @@ const Styles = {
   },
   input: {
     backgroundColor: 'transparent',
-    color: '#ccc',
+    fontWeight: 'bold',
+    color: 'green',
     border: 'none',
     fontSize: '1.2em'
   },

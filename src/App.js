@@ -89,7 +89,7 @@ class App extends React.Component {
 
     return (
       <div style = {Styles.container} id='app-div'>
-        <h2 style = {Styles.title}>Todo</h2>
+        <h2 style = {Styles.title}>To-do</h2>
         <ToDoList
           todos={this.state.todos}
           toggleCompleted={this.toggleCompleted}
