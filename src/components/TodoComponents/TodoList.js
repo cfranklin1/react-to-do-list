@@ -20,7 +20,9 @@ const Styles = {
     width: 'auto',
     height: '40%',
     margin: '1em',
-    padding: '2em'
+    padding: '2em',
+
+
   },
 
   input: {
@@ -60,7 +62,7 @@ class ToDoList extends React.Component {
           onChange={this.handleSearch}
         />
 
-        <ul style = {Styles.list}>
+        <ul style = {Styles.list} id="list-list">
           {this.props.todos.map(
             todo =>
               todo.task.includes(this.state.searchInput) && (

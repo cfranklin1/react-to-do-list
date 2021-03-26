@@ -26,10 +26,13 @@ const Styles = {
   },
   clear: {
     backgroundImage: `url(https://cdn.pixabay.com/photo/2012/04/02/16/52/trash-24938_1280.png)`,
-    backgroundSize: 'cover',
+    backgroundSize: '100% 100%',
     backgroundPosition: 'center',
     backgroundColor: '#ccc',
-    color: '#000',
+    color: '#fff',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    textShadow: '3px 3px #000',
     alignSelf: 'flex-end',
     borderRadius: '25%',
     width: '4em',
@@ -78,7 +81,8 @@ class ToDoForm extends React.Component {
           <button type="submit" style={Styles.add}>+</button>
 
         </form>
-        <button onClick={this.props.clearCompleted} style = {Styles.clear}></button>
+        <button onClick={this.props.clearCompleted} style = {Styles.clear}>Done</button>
+        <button onClick={this.props.clearAll} style = {Styles.clear}>All</button>
       </div>
     );
   }
