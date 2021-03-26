@@ -72,6 +72,7 @@ class ToDoForm extends React.Component {
             name="newTask"
             placeholder="new task..."
             onChange={this.handleInput}
+            maxLength="35"
           />
 
           <button type="submit" style={Styles.add}>+</button>

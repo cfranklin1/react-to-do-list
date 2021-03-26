@@ -1,6 +1,3 @@
-// your components will all go in this `component` directory.
-// feel free to change this component.js into TodoList.js
-
 import React from "react";
 import ToDo from "./Todo";
 
@@ -18,8 +15,10 @@ const Styles = {
     display: 'flexbox',
     alignContent: 'center',
     alignItems: 'center',
+    minWidth: '25%',
+    maxWidth: '55%',
     width: 'auto',
-    height: 'auto',
+    height: '40%',
     margin: '1em',
     padding: '2em'
   },
@@ -32,7 +31,8 @@ const Styles = {
 
   list: {
     fontSize: '1.5em',
-    fontFamily: 'Ink Draft'
+    fontFamily: 'Ink Free',
+    paddingLeft: '3em'
   }
 }
 
