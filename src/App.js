@@ -17,10 +17,12 @@ const Styles = {
     alignItems: 'center',
     height: '100vh',
     width: '100%',
-    maxWidth: '100%'
+    maxWidth: '100%',
+    minWidth: '100%',
   },
 
   title: {
+    fontFamily: 'Harrington',
     fontSize: '5em',
     color: '#000',
     padding: '.2em',
@@ -30,9 +32,10 @@ const Styles = {
 }
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+  // need place to store state in this component.
+  // design `App` to be the parent component of application.
+  // this component is going to take care of state and 
+  // any change handlers needed to work with state
   state = {
     todos: []
   };
@@ -62,6 +65,7 @@ class App extends React.Component {
 
   };
 
+
   toggleCompleted = id => {
     const toDoById = this.state.todos.map(todo => {
       return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
@@ -89,7 +93,7 @@ class App extends React.Component {
 
     return (
       <div style = {Styles.container} id='app-div'>
-        <h2 style = {Styles.title}>To-do</h2>
+        <h2 style = {Styles.title}>To Do</h2>
         <ToDoList
           todos={this.state.todos}
           toggleCompleted={this.toggleCompleted}
