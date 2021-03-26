@@ -3,9 +3,10 @@ import ToDoList from "./components/TodoComponents/TodoList";
 import ToDoForm from "./components/TodoComponents/TodoForm";
 import "./App.css";
 
-
 const Styles = {
-
+  '@media (max-width: 600px)': {
+    display: 'none',
+  },
   container: {
     fontFamily: 'convection',
     backgroundImage: `url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_1280.jpg")`,
@@ -19,6 +20,7 @@ const Styles = {
     width: '100%',
     maxWidth: '100%',
     minWidth: '100%',
+
   },
 
   title: {
@@ -27,9 +29,12 @@ const Styles = {
     color: '#000',
     padding: '.2em',
     textShadow: '2px 2px #fff',
-  },  
+  }, 
+ 
 
 }
+
+
 
 class App extends React.Component {
   // need place to store state in this component.
@@ -84,6 +89,11 @@ class App extends React.Component {
     });
     localStorage.setItem("todoList", JSON.stringify(completed));
   };
+  clearAll = () => {
+    this.setState({
+      todos: []
+    })
+  }
 
 
 
@@ -93,16 +103,18 @@ class App extends React.Component {
 
     return (
       <div style = {Styles.container} id='app-div'>
+
         <h2 style = {Styles.title}>To Do</h2>
         <ToDoList
           todos={this.state.todos}
           toggleCompleted={this.toggleCompleted}
         />
-        <h2 style = {Styles.title}>List</h2>
+        <h2 style = {Styles.title}>List</h2> 
 
         <ToDoForm
           handleSubmit={this.handleSubmit}
           clearCompleted={this.clearCompleted}
+          clearAll={this.clearAll}
         />
       </div>
     );
