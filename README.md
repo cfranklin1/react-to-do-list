@@ -1,1 +1,1 @@
-A clone of my React-Todo project
+React-Todo project - remake
